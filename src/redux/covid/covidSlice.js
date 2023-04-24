@@ -31,6 +31,7 @@ const covidSlice = createSlice({
         cases: covidCase.cases,
         deaths: covidCase.deaths,
         recovered: covidCase.recovered,
+        critical: covidCase.critical,
       }));
       return ({
         ...state,
