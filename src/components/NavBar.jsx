@@ -5,7 +5,7 @@ const NavBar = () => {
   const { name } = useParams();
   return (
     <nav>
-      {useParams().hasOwnProperty('name') && <FaArrowCircleLeft />}
+      { name && <FaArrowCircleLeft />}
       <div className="nav-text">
         <span>covid-image</span>
         <div><h2>Covid-19 cases</h2></div>
