@@ -1,14 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import client from '../../client/client';
 
-const fetchCases = createAsyncThunk(
+export const fetchCases = createAsyncThunk(
   'covid/fetchCases',
   async (_, thunkAPI) => {
     try {
-      const response = client.get('countries');
+      const response = await client.get('countries');
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue({ error: 'Cannot fetch covid data' });
+      return thunkAPI.rejectWithValue({ error: 'Something went wrong' });
     }
   },
 );
@@ -36,7 +36,7 @@ const covidSlice = createSlice({
       return ({
         ...state,
         isLoading: false,
-        rockets: caseList,
+        cases: caseList,
       });
     })
       .addCase(fetchCases.pending, (state) => ({
