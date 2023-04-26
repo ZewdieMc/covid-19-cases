@@ -3,20 +3,27 @@ import { Outlet } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCases as fetchCovidData } from '../redux/covid/covidSlice';
 import NavBar from './NavBar';
-import Header from './Header';
+import Head from './Header';
 
 const CovidLayOut = () => {
   const dispatch = useDispatch();
   const cases = useSelector((state) => state.cases.cases);
+  const { isLoading } = useSelector((state) => state.cases);
   useEffect(() => {
     if (cases.length === 0) dispatch(fetchCovidData());
   }, [dispatch, cases.length]);
 
   return (
     <div className="covid-layout">
-      <NavBar />
-      <Header />
-      <Outlet context={{ cases }} />
+      { isLoading
+        ? <div className="loading">Loading...</div>
+        : (
+          <>
+            <NavBar />
+            <Head />
+            <Outlet context={{ cases }} />
+          </>
+        )}
     </div>
   );
 };
