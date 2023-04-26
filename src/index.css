@@ -94,12 +94,17 @@ nav .searchBar {
 }
 
 .searchBar > input {
-  width: 100%;
+  width: 200px;
   padding: 0.5rem;
   border: none;
   border-radius: 6.5rem;
+  opacity: 1;
   background-color: var(--secondary);
   color: var(--tertiary);
+}
+
+.searchBar > input:focus {
+  outline: none;
 }
 
 .searchBar .search-icon {

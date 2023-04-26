@@ -1,8 +1,9 @@
 import { FaArrowLeft, FaSearch } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import covid from '../assests/images/coronavirus.png';
 
-const NavBar = () => {
+const NavBar = ({ onChange, searchText }) => {
   const { name } = useParams();
   return (
     <nav>
@@ -12,10 +13,15 @@ const NavBar = () => {
         <div><h2>Covid-19 cases</h2></div>
       </div>
       <div className="searchBar">
-        <input type="text" placeholder="Search Country" />
+        <input type="text" placeholder="Search Country" value={searchText} onChange={onChange} />
         <FaSearch className="search-icon" />
       </div>
     </nav>
   );
+};
+
+NavBar.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  searchText: PropTypes.string.isRequired,
 };
 export default NavBar;
