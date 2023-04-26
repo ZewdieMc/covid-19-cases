@@ -16,7 +16,7 @@ const CovidLayOut = () => {
     <div className="covid-layout">
       <NavBar />
       <Header />
-      <Outlet />
+      <Outlet context={{ cases }} />
     </div>
   );
 };
