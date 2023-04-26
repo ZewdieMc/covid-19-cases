@@ -17,19 +17,8 @@
 body {
   margin: 0;
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
     'Poppins',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary);
   color: var(--tertiary);
 }
@@ -98,6 +87,27 @@ body {
   background-color: var(--primary);
 }
 
+nav .searchBar {
+  position: relative;
+  display: inline-block;
+  padding-left: 0.5rem;
+}
+
+.searchBar > input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6.5rem;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+}
+
+.searchBar .search-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
 .covid-layout nav .logo > img:hover {
   animation: pulse 1s infinite;
 }
@@ -159,5 +169,11 @@ body {
 
   50% {
     transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cases {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
