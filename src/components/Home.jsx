@@ -4,22 +4,21 @@ import Case from './Case';
 
 const Home = () => {
   const { cases } = useOutletContext();
-  const { isLoading } = useSelector((state) => state.cases);
   const { error } = useSelector((state) => state.cases);
 
   return (
     <div className="casesList">
-      {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {cases && (
+      {cases.length ? (
         <div className="cases">
           {
             cases.map((singleCase) => (
-              <Case key={singleCase.id} covidCase={singleCase} />
+              <Case key={singleCase.country} covidCase={singleCase} />
             ))
           }
         </div>
-      )}
+      )
+        : <div className="loading">No Result Found</div>}
     </div>
   );
 };
