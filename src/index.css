@@ -31,16 +31,6 @@ body {
   color: var(--tertiary);
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
-}
-
 .covid-layout {
   display: flex;
   flex-direction: column;
@@ -52,6 +42,15 @@ code {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+}
+
+.covid-layout nav .back-arrow {
+  transition: all 0.3s ease;
+  color: var(--tertiary);
+}
+
+.covid-layout nav .back-arrow:hover {
+  transform: translateX(-0.5rem);
 }
 
 .covid-layout nav .logo {
