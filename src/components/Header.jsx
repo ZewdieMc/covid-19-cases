@@ -1,6 +1,8 @@
-// import useSelector from react-redux
+import useSelector from react-redux
 
-const Header = () => (
+const Header = () => {
+  const { cases } = useSelector((state) => state.cases);
+return (
   <div className="global">
     <h1>Global Real Time Cases</h1>
     <div className="global-cases">
@@ -9,5 +11,6 @@ const Header = () => (
     </div>
   </div>
 );
+};
 
 export default Header;
