@@ -15,7 +15,7 @@ export const fetchCases = createAsyncThunk(
 
 const initialState = {
   cases: [],
-  isLoading: false,
+  isLoading: true,
   error: '',
 };
 
