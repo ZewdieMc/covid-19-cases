@@ -7,7 +7,7 @@ const Head = () => {
 
   return (
     <div className="global">
-      <h1>Global Real Time Cases</h1>
+      <h1>Global Real Time covid-19 Cases</h1>
       <div className="global-cases">
         <div className="global-cases_confirmed">
           <h3>Confirmed</h3>

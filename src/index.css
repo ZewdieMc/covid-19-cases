@@ -109,12 +109,17 @@ nav .searchBar {
 
 .searchBar .search-icon {
   position: absolute;
-  right: 0.5rem;
+  right: 0.8rem;
   top: 0.5rem;
 }
 
 .covid-layout nav .logo > img:hover {
   animation: pulse 1s infinite;
+}
+
+.covid-layout .loading {
+  font-size: 1.5rem;
+  margin: 2rem auto auto;
 }
 
 .covid-layout nav .back-arrow {
@@ -123,7 +128,7 @@ nav .searchBar {
 }
 
 .covid-layout nav .back-arrow:hover {
-  transform: translateX(-0.5rem);
+  transform: translateX(-0.25rem);
 }
 
 .covid-layout nav .logo {
@@ -136,6 +141,11 @@ nav .searchBar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 0.5rem;
+}
+
+.casesList .search-not-found {
+  font-size: 2rem;
+  margin: 3rem auto;
 }
 
 .cases .case {
@@ -209,7 +219,7 @@ nav .searchBar {
   grid-column: 1 / 3;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
   .cases {
     grid-template-columns: 1fr;
   }

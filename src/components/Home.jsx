@@ -18,7 +18,7 @@ const Home = () => {
           }
         </div>
       )
-        : <div className="loading">No Result Found</div>}
+        : <div className="search-not-found">No Results Found</div>}
     </div>
   );
 };
