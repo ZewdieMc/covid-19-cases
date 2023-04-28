@@ -27,9 +27,9 @@ const Detail = () => {
         <p style={{ color: '#B98685' }}>{covidCase.critical}</p>
       </div>
       <div className="detail country-detail_deaths">
-        <FaSkull size={28} style={{ fill: '#b3221b' }} />
+        <FaSkull size={28} style={{ fill: 'red' }} />
         <h2>Deaths</h2>
-        <p style={{ color: '#b3221b' }}>{covidCase.deaths}</p>
+        <p style={{ color: 'red' }}>{covidCase.deaths}</p>
       </div>
       <div className="detail country-detail_recovered">
         <FaSkating size={28} style={{ fill: '#5CDB95' }} />
