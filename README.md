@@ -82,7 +82,6 @@ Have a look at the **[video description](https://www.loom.com/share/3a4a8b291aa1
 ## 🚀 Live Demo <a name="live-demo"></a> 
  Have a look at the [**Live Demo**](https://react-capstone-st7y.onrender.com/) for this app.
 
-<!-- [Space Traveler's Hub]() -->
 
 <p align="right">(<a href="#table-contents">back to top</a>)</p>
 
@@ -205,7 +204,7 @@ If you like this project, kindly follow me on GitHub 😊
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Much appreciation goes to microverse and Space X for the availability of the API to practice.
+Much appreciation goes to microverse for the whole curriculum and [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for the design.
 
 <p align="right">(<a href="#table-contents">back to top</a>)</p>
 
