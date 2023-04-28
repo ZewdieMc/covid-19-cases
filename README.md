@@ -30,12 +30,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-A single page web application that provides a platform for scientists to get booked for reservations and join missions to space travel.
 # 📖 Global COVID-19 cases  <a name="about-project"></a>
 
 **Global COVID-19 cases** A react app that displays COVID-19 cases globally and shows real-time data of COVID-19 cases worldwide. It pulls data from reliable sources and displays it in an intuitive and user-friendly interface. Users can view cases by country, and view detail for each country.
 
-Building this application will allow to learn how to use React and Redux in the context of a real application and get hand exprience on front-end development.
+Have a look at the **[video description](https://www.loom.com/share/3a4a8b291aa14f0abd369ecb7587f4c0)** of the project.
 
 ## 🛠 Built With <a name="built-with"></a> 
 
