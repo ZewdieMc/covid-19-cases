@@ -17,12 +17,17 @@ const initialState = {
   cases: [],
   isLoading: true,
   error: '',
+  searchText: '',
 };
 
 const covidSlice = createSlice({
   name: 'cases',
   initialState,
-  reducers: {},
+  reducers: {
+    searchInput(state, action) {
+      state.searchText = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchCases.fulfilled, (state, action) => {
       const caseList = action.payload.map((covidCase) => ({
@@ -51,5 +56,5 @@ const covidSlice = createSlice({
       }));
   },
 });
-
+export const { searchInput } = covidSlice.actions;
 export default covidSlice.reducer;
