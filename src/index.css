@@ -270,8 +270,10 @@ nav .searchBar {
     flex-direction: row;
   }
 
-  .country-detail_country {
+  .country-detail .country-detail_country {
     grid-column: 1 / 2;
+    flex-direction: column;
+    align-items: center;
   }
 
   .country-detail div:nth-child(even) {
