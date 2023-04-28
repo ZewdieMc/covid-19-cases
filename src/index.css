@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Slab:wght@200;300;400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -10,15 +10,14 @@
   --primary: #170663;
   --secondary: #1b656e;
   --tertiary: #f5f5f5;
-  --orange: #f5a623;
+  --orange: #ffd400;
   --red: #f00;
+  --green: #2b612b;
 }
 
 body {
   margin: 0;
-  font-family:
-    'Poppins',
-    sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: var(--primary);
   color: var(--tertiary);
 }
@@ -150,20 +149,22 @@ nav .searchBar {
 
 .cases .case {
   display: flex;
-  padding: 1rem;
   background-color: var(--secondary);
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .cases .case .case-country {
   font-weight: 700;
   color: var(--tertiary);
+  font-size: 0.8rem;
 }
 
 .cases .case .case-country_confirmed {
-  font-weight: 500;
   color: var(--orange);
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 .cases .case .detail-arrow {
@@ -219,9 +220,32 @@ nav .searchBar {
   grid-column: 1 / 3;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .cases {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .cases .case {
+    height: 10rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0.7rem;
+  }
+
+  .case .case-country {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: auto;
+    font-size: 0.8rem;
+  }
+
+  .cases .case:nth-child(4n+1),
+  .cases .case:nth-child(4n) {
+    opacity: 0.9;
   }
 
   nav .logo > div > h2 {
@@ -234,5 +258,23 @@ nav .searchBar {
 
   .searchBar > input:focus {
     opacity: 1;
+  }
+
+  .country-detail {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+
+  .country-detail div {
+    padding: 2rem 1rem;
+    flex-direction: row;
+  }
+
+  .country-detail_country {
+    grid-column: 1 / 2;
+  }
+
+  .country-detail div:nth-child(even) {
+    opacity: 0.8;
   }
 }
