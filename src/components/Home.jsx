@@ -1,4 +1,3 @@
-// import { useOutletContext } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Case from './Case';
 
